@@ -1,8 +1,28 @@
-= money-mongoid
+# Money for mongoid
 
-Description goes here.
+Use the [money](https://github.com/RubyMoney/money) gem with Mongoid 2.x and 3.x.
 
-== Contributing to money-mongoid
+## Install
+
+in Gemfile
+
+```ruby
+gem 'money-mongoid'
+```
+
+Bundle via Terminal:
+
+`$ bundle`
+
+## Usage
+
+```ruby
+require 'money-mongoid'
+``
+
+See specs for usage examples, fx `money/mongoid/3x/money_spec.rb`
+
+## Contributing to money-mongoid
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.

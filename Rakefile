@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "money-mongoid"
   gem.homepage = "http://github.com/kristianmandrup/money-mongoid"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Mongoid support and integration for the money gem}
+  gem.description = %Q{Makes it easy to use money with mongoid}
   gem.email = "kmandrup@gmail.com"
   gem.authors = ["Kristian Mandrup"]
   # dependencies defined in Gemfile
