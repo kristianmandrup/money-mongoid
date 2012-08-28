@@ -1,3 +1,4 @@
+require 'money'
 require 'money/mongoid/core_ext'
 require 'money/orm/generic'
 
