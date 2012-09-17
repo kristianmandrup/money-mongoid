@@ -2,7 +2,7 @@
 
 module Mongoid
 	module Monetizable
-		include Money::Orm::Generic
+		include ::Money::Orm::Generic
 
 		def self.included(base)
 			base.class_eval do
@@ -11,7 +11,7 @@ module Mongoid
 			  
 			  validates_numericality_of :cents
 			end
-			base.extend Money::Orm::Generic::ClassMethods				
+			base.extend ::Money::Orm::Generic::ClassMethods				
 		end
 	end
 end

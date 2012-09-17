@@ -1,4 +1,6 @@
 require 'money/mongoid/spec_helper'
+require 'money/mongoid/models'
+require 'money/mongoid/shared_ex'
 
 describe Money::Mongoid::Monetizable do
   before do
@@ -45,7 +47,7 @@ describe Money::Mongoid::Monetizable do
         subject { cost_account }
 
         before do
-          MoneyRails::Moneys.cost_class = Price
+          Mongoid::Moneys.cost_class = Price
         end
 
         let(:cost_account) do
@@ -73,10 +75,10 @@ describe Money::Mongoid::Monetizable do
         subject { valued_at(4000) }
 
         before do
-          MoneyRails::Moneys.classes = Price
+          Mongoid::Moneys.classes = Price
         end
 
-        specify { MoneyRails::Moneys.value_class.should == Price }
+        specify { Mongoid::Moneys.value_class.should == Price }
 
         specify { subject.should be_a Price }
         specify { subject.price.should be_a Money }

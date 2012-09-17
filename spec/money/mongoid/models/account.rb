@@ -7,6 +7,6 @@ class Account
   embeds_one 		:deposit, 			:as => :priced  
   monetize_one 	:rental_price
 
-  monetize 			:rent
-  monetize_many :costs, :class_name => 'Price'
+  monetize_one 	:rent
+  monetize_many :costs, :class_name => 'Price', :as => :costing
 end

@@ -4,8 +4,11 @@ class Money
 		  # Virtual price / currency attributes
 		  module ClassMethods
 			  def monetize_for *names
-					options = names.last.kind_of?(Hash) ? names.delete(names.last) : {:as => :priced}
-					names.each {|name| monetize name, options }
+					options = names.extract_options!
+					options = {:as => :priced} if options.blank?			
+					names.each do |name| 
+						monetize_one name, options.dup
+					end
 				end
 			end
 		  

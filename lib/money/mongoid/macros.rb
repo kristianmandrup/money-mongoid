@@ -22,7 +22,7 @@ end
 module Mongoid
 	module Document
 		module ClassMethods
-			include Money::Mongoid::Macros			
+			include Mongoid::Money::Macros			
 		end
 	end
 end
