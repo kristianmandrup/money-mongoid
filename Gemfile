@@ -2,7 +2,8 @@ source :rubygems
 
 gem 'money'
 
-gem 'mongoid',  "~> 3.0.0.rc"
+gem 'mongoid',  "~> 3.0.0"
+gem 'origin', :git => "git://github.com/nessche/origin.git", :branch => "custom_criteria_expansion"
 gem 'moped'
 
 # gem 'mongoid',       "~> 2.4"

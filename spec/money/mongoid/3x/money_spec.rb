@@ -46,4 +46,17 @@ describe 'Mongoid custom Money type' do
     search_res = Product.where :price.gte => Money.new(2000, 'EUR')
     search_res.count.should == 0
   end
+
+  it "should respect the currency information when using comparison operators" do
+    6.times do |n|
+      Product.create :price => Money.new(n * 500, 'USD')
+      Product.create :price => Money.new(n * 500, 'EUR')
+    end
+ #   search_res = Product.and({"price.cents" => {"$gte" => 2000}}, {"price.currency_iso" => "EUR"})
+    search_res = Product.where :price.gte => Money.new(2000, 'EUR')
+    search_res.count.should == 2
+    search_res = Product.where :price.lt => Money.new(2000, "USD")
+    search_res.count.should == 4
+
+  end
 end

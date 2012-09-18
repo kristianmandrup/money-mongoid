@@ -5,6 +5,8 @@ require 'money'
 require 'money/mongoid/version_setup'
 
 Mongoid.configure do |config|
+  Mongoid.logger.level = Logger::DEBUG
+  Moped.logger.level = Logger::DEBUG
   Mongoid::VersionSetup.configure config
 end
 
