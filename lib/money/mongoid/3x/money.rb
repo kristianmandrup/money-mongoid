@@ -38,10 +38,15 @@ module Mongoize
     private
 
     def specify_with_multiple_currencies(name, operator, value, options)
-      # TODO: add the code here to check which currencies should be used for comparision, in options["compare_using"]
-      # and if need be, create the equivalent money objects (using the @bank exchange rates)
-      # and call specify with_single_currency with each of them
-      specify_with_single_currency(name,operator,value)
+      currencies = [value.currency.iso_code]
+      currencies.concat options[:compare_using] if options && options[:compare_using]
+      multiple_money_values = value.exchange_to_currencies(currencies.to_set)
+      subconditions = multiple_money_values.collect {|money| specify_with_single_currency(name, operator, money)}
+      if subconditions.count > 0
+        {"$or" => subconditions}
+      else
+        subconditions[0]
+      end
     end
 
     def specify_with_single_currency(name, operator, value)
@@ -66,6 +71,11 @@ class Money
   def __evolve_to_money__
     self
   end
+
+  def exchange_to_currencies(currencies)
+    currencies.map {|currency| exchange_to(currency)}
+  end
+
 end
 
 Mongoid::Fields.option :compare_using do |model, field, value|
