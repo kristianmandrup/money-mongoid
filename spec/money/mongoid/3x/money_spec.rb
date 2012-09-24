@@ -73,6 +73,8 @@ describe 'Mongoid custom Money type' do
 
 
   it "should respect the currency information when using comparison operators" do
+    Product.delete_all
+
     create_money 'USD'
     create_money 'EUR'
 

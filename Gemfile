@@ -4,6 +4,7 @@ gem 'money'
 gem 'mongoid',  "~> 3.0.0"
 gem 'origin'
 gem 'moped'
+gem 'origin-selectable_ext'
 
 # gem 'mongoid',       "~> 2.4"
 # gem 'bson'

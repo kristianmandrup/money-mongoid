@@ -1,3 +1,5 @@
+require 'origin-selectable_ext'
+
 module Mongoize
   extend ActiveSupport::Concern
   # See http://mongoid.org/en/mongoid/docs/upgrading.html        
@@ -94,4 +96,3 @@ Mongoid::Fields.option :compare_using do |model, field, value|
   end
 end
 
-require 'money/mongoid/3x/origin/selectable'
