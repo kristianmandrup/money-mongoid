@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "money-mongoid"
-  s.version = "0.1.2"
+  s.version = "0.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
-  s.date = "2012-08-28"
+  s.date = "2012-09-24"
   s.description = "Makes it easy to use money with mongoid"
   s.email = "kmandrup@gmail.com"
   s.extra_rdoc_files = [
@@ -29,8 +29,10 @@ Gem::Specification.new do |s|
     "lib/money/mongoid.rb",
     "lib/money/mongoid/2x/money.rb",
     "lib/money/mongoid/3x/money.rb",
+    "lib/money/mongoid/3x/origin/selectable.rb",
     "lib/money/mongoid/core_ext.rb",
     "lib/money/mongoid/core_ext/array.rb",
+    "lib/money/mongoid/core_ext/range.rb",
     "lib/money/mongoid/core_ext/string.rb",
     "lib/money/mongoid/macros.rb",
     "lib/money/mongoid/monetizable.rb",
@@ -41,9 +43,11 @@ Gem::Specification.new do |s|
     "spec/money/mongoid/2x/product.rb",
     "spec/money/mongoid/3x/money_spec.rb",
     "spec/money/mongoid/3x/product.rb",
+    "spec/money/mongoid/models.rb",
     "spec/money/mongoid/models/account.rb",
     "spec/money/mongoid/models/price.rb",
     "spec/money/mongoid/monetize_spec.rb",
+    "spec/money/mongoid/shared_ex.rb",
     "spec/money/mongoid/spec_helper.rb",
     "spec/money/mongoid/support/mongoid.yml",
     "spec/money/mongoid/version_setup.rb",
@@ -60,7 +64,10 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<money>, [">= 0"])
-      s.add_runtime_dependency(%q<mongoid>, [">= 2.4.0"])
+      s.add_runtime_dependency(%q<mongoid>, ["~> 3.0.0"])
+      s.add_runtime_dependency(%q<origin>, [">= 0"])
+      s.add_runtime_dependency(%q<moped>, [">= 0"])
+      s.add_runtime_dependency(%q<origin-selectable_ext>, [">= 0"])
       s.add_development_dependency(%q<rspec>, [">= 2.10"])
       s.add_development_dependency(%q<rdoc>, [">= 3.12"])
       s.add_development_dependency(%q<bundler>, [">= 1.1.0"])
@@ -68,7 +75,10 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<simplecov>, [">= 0.5"])
     else
       s.add_dependency(%q<money>, [">= 0"])
-      s.add_dependency(%q<mongoid>, [">= 2.4.0"])
+      s.add_dependency(%q<mongoid>, ["~> 3.0.0"])
+      s.add_dependency(%q<origin>, [">= 0"])
+      s.add_dependency(%q<moped>, [">= 0"])
+      s.add_dependency(%q<origin-selectable_ext>, [">= 0"])
       s.add_dependency(%q<rspec>, [">= 2.10"])
       s.add_dependency(%q<rdoc>, [">= 3.12"])
       s.add_dependency(%q<bundler>, [">= 1.1.0"])
@@ -77,7 +87,10 @@ Gem::Specification.new do |s|
     end
   else
     s.add_dependency(%q<money>, [">= 0"])
-    s.add_dependency(%q<mongoid>, [">= 2.4.0"])
+    s.add_dependency(%q<mongoid>, ["~> 3.0.0"])
+    s.add_dependency(%q<origin>, [">= 0"])
+    s.add_dependency(%q<moped>, [">= 0"])
+    s.add_dependency(%q<origin-selectable_ext>, [">= 0"])
     s.add_dependency(%q<rspec>, [">= 2.10"])
     s.add_dependency(%q<rdoc>, [">= 3.12"])
     s.add_dependency(%q<bundler>, [">= 1.1.0"])
