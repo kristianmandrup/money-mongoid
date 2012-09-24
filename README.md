@@ -20,6 +20,8 @@ Bundle via Terminal:
 require 'money-mongoid'
 ``
 
+Now also supports MoneyRange with between queries and can even do dynamic currency conversions as part of the query!!! ;)
+
 See specs for usage examples, fx `money/mongoid/3x/money_spec.rb`
 
 ## Contributing to money-mongoid

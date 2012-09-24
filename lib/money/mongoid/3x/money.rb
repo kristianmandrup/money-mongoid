@@ -35,6 +35,14 @@ module Mongoize
       end
     end
 
+    def custom_between(field, value, options = {})
+      { "$gte" => ::Money.new(value.min, value.iso_code), "$lte" => ::Money.new(value.max, value.iso_code) }
+    end
+
+    def custom_between? field, value
+      true
+    end
+
     private
 
     def specify_with_multiple_currencies(name, operator, value, options)
@@ -79,5 +87,11 @@ class Money
 end
 
 Mongoid::Fields.option :compare_using do |model, field, value|
-  # TODO: add some validation here to make sure the value is a valid ISO currency code
+  value.each do |iso_code|
+    unless Money::Currency.find(iso_code)
+      raise ArgumentError, "Invalid ISO currency code: #{value}" 
+    end
+  end
 end
+
+require 'money/mongoid/3x/origin/selectable'
