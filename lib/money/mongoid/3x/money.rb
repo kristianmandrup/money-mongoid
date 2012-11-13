@@ -10,7 +10,7 @@ module Mongoize
 
   module ClassMethods
     def demongoize(value)
-      ::Money.new get_cents(value), get_currency(value)
+      value && ::Money.new( get_cents(value), get_currency(value) )
     end
 
     def evolve(object)
