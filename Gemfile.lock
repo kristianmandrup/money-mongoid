@@ -48,6 +48,7 @@ GEM
       multi_json (~> 1.0)
       simplecov-html (~> 0.5.3)
     simplecov-html (0.5.3)
+    sugar-high (0.7.3)
     tzinfo (0.3.33)
 
 PLATFORMS
@@ -65,3 +66,4 @@ DEPENDENCIES
   rdoc (>= 3.12)
   rspec (>= 2.10)
   simplecov (>= 0.5)
+  sugar-high (~> 0.7.0)

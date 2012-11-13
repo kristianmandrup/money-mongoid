@@ -5,6 +5,7 @@ gem 'mongoid',  "~> 3.0.0"
 gem 'origin'
 gem 'moped'
 gem 'origin-selectable_ext'
+gem 'sugar-high', '~> 0.7.0'
 
 # gem 'mongoid',       "~> 2.4"
 # gem 'bson'
