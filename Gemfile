@@ -1,7 +1,7 @@
 source :rubygems
 
 gem 'money'
-gem 'mongoid',  "~> 3.0.0"
+gem 'mongoid',  "~> 3"
 gem 'origin'
 gem 'moped'
 gem 'origin-selectable_ext'
