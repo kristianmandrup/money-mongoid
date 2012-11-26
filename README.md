@@ -18,11 +18,17 @@ Bundle via Terminal:
 
 ```ruby
 require 'money-mongoid'
-``
+```
 
 Now also supports MoneyRange with between queries and can even do dynamic currency conversions as part of the query!!! ;)
 
 See specs for usage examples, fx `money/mongoid/3x/money_spec.rb`
+
+## Spec note
+
+Please note that currently the `money/mongoid/monetize_spec.rb` fails with a number of errors. Please help fix these bugs
+
+However the `2x` and `3x` specs should pass just fine ;) 
 
 ## Contributing to money-mongoid
  

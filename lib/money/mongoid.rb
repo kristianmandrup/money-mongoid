@@ -1,4 +1,5 @@
 require 'money'
+require 'sugar-high/delegate'
 require 'money/mongoid/core_ext'
 
 require 'money/orm/generic'
