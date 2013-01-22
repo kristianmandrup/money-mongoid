@@ -14,7 +14,7 @@ module Mongoize
     end
 
     def evolve(object)
-      object.__evolve_to_money__.mongoize
+      object && object.__evolve_to_money__.mongoize
     end
 
     def custom_serialization?(operator)
