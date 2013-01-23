@@ -59,7 +59,7 @@ DEPENDENCIES
   bundler (>= 1.1.0)
   jeweler (>= 1.8.4)
   money
-  mongoid (~> 3.0.0)
+  mongoid (~> 3.0)
   moped
   origin
   origin-selectable_ext
