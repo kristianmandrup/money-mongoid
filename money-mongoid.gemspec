@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
-  s.date = "2012-09-24"
+  s.date = "2013-02-27"
   s.description = "Makes it easy to use money with mongoid"
   s.email = "kmandrup@gmail.com"
   s.extra_rdoc_files = [
@@ -56,7 +56,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/kristianmandrup/money-mongoid"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.24"
+  s.rubygems_version = "1.8.25"
   s.summary = "Mongoid support and integration for the money gem"
 
   if s.respond_to? :specification_version then
@@ -64,10 +64,11 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<money>, [">= 0"])
-      s.add_runtime_dependency(%q<mongoid>, ["~> 3.0"])
-      s.add_runtime_dependency(%q<origin>, [">= 0"])
-      s.add_runtime_dependency(%q<moped>, [">= 0"])
+      s.add_runtime_dependency(%q<mongoid>, [">= 2.4"])
+      s.add_runtime_dependency(%q<origin>, [">= 1"])
+      s.add_runtime_dependency(%q<moped>, [">= 1"])
       s.add_runtime_dependency(%q<origin-selectable_ext>, [">= 0"])
+      s.add_runtime_dependency(%q<sugar-high>, [">= 0.7.2"])
       s.add_development_dependency(%q<rspec>, [">= 2.10"])
       s.add_development_dependency(%q<rdoc>, [">= 3.12"])
       s.add_development_dependency(%q<bundler>, [">= 1.1.0"])
@@ -75,10 +76,11 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<simplecov>, [">= 0.5"])
     else
       s.add_dependency(%q<money>, [">= 0"])
-      s.add_dependency(%q<mongoid>, ["~> 3.0"])
-      s.add_dependency(%q<origin>, [">= 0"])
-      s.add_dependency(%q<moped>, [">= 0"])
+      s.add_dependency(%q<mongoid>, [">= 2.4"])
+      s.add_dependency(%q<origin>, [">= 1"])
+      s.add_dependency(%q<moped>, [">= 1"])
       s.add_dependency(%q<origin-selectable_ext>, [">= 0"])
+      s.add_dependency(%q<sugar-high>, [">= 0.7.2"])
       s.add_dependency(%q<rspec>, [">= 2.10"])
       s.add_dependency(%q<rdoc>, [">= 3.12"])
       s.add_dependency(%q<bundler>, [">= 1.1.0"])
@@ -87,10 +89,11 @@ Gem::Specification.new do |s|
     end
   else
     s.add_dependency(%q<money>, [">= 0"])
-    s.add_dependency(%q<mongoid>, ["~> 3.0"])
-    s.add_dependency(%q<origin>, [">= 0"])
-    s.add_dependency(%q<moped>, [">= 0"])
+    s.add_dependency(%q<mongoid>, [">= 2.4"])
+    s.add_dependency(%q<origin>, [">= 1"])
+    s.add_dependency(%q<moped>, [">= 1"])
     s.add_dependency(%q<origin-selectable_ext>, [">= 0"])
+    s.add_dependency(%q<sugar-high>, [">= 0.7.2"])
     s.add_dependency(%q<rspec>, [">= 2.10"])
     s.add_dependency(%q<rdoc>, [">= 3.12"])
     s.add_dependency(%q<bundler>, [">= 1.1.0"])
