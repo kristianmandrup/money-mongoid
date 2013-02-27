@@ -1,11 +1,11 @@
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'money'
-gem 'mongoid',  "~> 3.0"
-gem 'origin'
-gem 'moped'
+gem 'mongoid',  ">= 2.4"
+gem 'origin',   '>= 1'
+gem 'moped',    '>= 1'
 gem 'origin-selectable_ext'
-gem 'sugar-high', '~> 0.7.0'
+gem 'sugar-high', '>= 0.7.2'
 
 # gem 'mongoid',       "~> 2.4"
 # gem 'bson'
@@ -19,7 +19,6 @@ group :development do
   gem "simplecov",">= 0.5"
 end
 
-group :test do  
-  gem 'moped'
-  gem 'bson_ext'
+group :test do
+  gem 'bson'
 end 

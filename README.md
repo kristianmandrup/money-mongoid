@@ -1,6 +1,6 @@
 # Money for mongoid
 
-Use the [money](https://github.com/RubyMoney/money) gem with Mongoid 2.x and 3.x.
+Use the [money](https://github.com/RubyMoney/money) gem with Mongoid 2.4+, 3 (and 4).
 
 ## Install
 
